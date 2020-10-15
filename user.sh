@@ -32,8 +32,8 @@ then
 else
         echo "$Mobile Invalid"
 fi
-read -p "Enter Password:" pass
-pat='^(?=.*[A-Z])(?=.*\d)[a-zA-Z0-9]{8,}$'
+rread -p "Enter Password:" pass
+pat='^(?=.*[A-Z])(?=.*\d)(?=.*[!@%^&$*])[a-zA-Z0-9!@%^$&*]{8,}$'
 if [[ $pass =~ $pat ]]
 then
         echo "$pass valid"
